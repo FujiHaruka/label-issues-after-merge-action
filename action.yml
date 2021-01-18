@@ -1,0 +1,14 @@
+name: 'Label Issues After Merge'
+description: 'GitHub Actions triggered by merging pull requests to labels to associated issues.'
+author: 'FujiHaruka'
+inputs:
+  github_token:
+    description: 'Auth token used to manage issues or pull requests'
+    default: ${{ github.token }}
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'check-square'
+  color: 'white'
